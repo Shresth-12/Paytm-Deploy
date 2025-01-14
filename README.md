@@ -1,81 +1,102 @@
-# Turborepo starter
+Paytm User App
+==============
 
-This is an official starter Turborepo.
+A feature-rich Paytm user application that allows users to perform transactions, view their wallets, and manage their accounts with a seamless interface.
 
-## Using this example
+Features
+--------
 
-Run the following command:
+*   User registration and login system.
+    
+*   Wallet management (view balance, add money, etc.).
+    
+*   Transaction history and details.
+    
+*   Seamless UI/UX for easy navigation.
+   
+   
+Tech Stack
+----------
 
-```sh
-npx create-turbo@latest
-```
+*   **Frontend**:  Next.js 
+    
+*   **Backend**: Node.js, Express.js
+    
+*   **Database**: PostgreSQL
+    
+*   **Authentication**:NEXT-AUTH
+    
+    
 
-## What's inside?
+Prerequisites
+-------------
 
-This Turborepo includes the following packages/apps:
+Before you begin, ensure you have the following installed:
 
-### Apps and Packages
+*   **Node.js** (v14+)
+    
+*   **npm** (Node Package Manager) or **yarn**
+    
+*   **MongoDB/PostgreSQL** (if applicable)
+    
+*   **Git**
+    
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+Installation and Setup
+----------------------
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+Follow these steps to set up and run the project locally:
 
-### Utilities
+### 1\. Clone the Repository
+git clone https://github.com//.git
 
-This Turborepo has some additional tools already setup for you:
+### 2\. Install Dependencies
+npm install   `
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+### 3\. Set Up Environment Variables
 
-### Build
+#### For apps/user-app
 
-To build all apps and packages, run the following command:
+Create a .env file in the apps/user-app directory and add the following variables:
+JWT_SECRET=your-JWT_SECRET
+NEXTAUTH_URL=url(for ex:http://localhost:3001)
 
-```
-cd my-turborepo
-pnpm build
-```
+#### For packages/db
 
-### Develop
+Create a .env file in the packages/db directory and add the following variables:
+ MONGO_URI=your-mongodb-connection-string  
+POSTGRES_URI=your-postgresql-connection-string   `
 
-To develop all apps and packages, run the following command:
+> Replace the placeholders with your actual credentials.
 
-```
-cd my-turborepo
-pnpm dev
-```
+### 4\. Start the Server
+ npm start   `
 
-### Remote Caching
+### 5\. Run in Development Mode (Optional)
 
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+If you want to run in development mode with live-reloading:
+ npm run dev   `
 
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
+Usage
+-----
 
-```
-cd my-turborepo
-npx turbo login
-```
+1.  http://localhost:5000
+    
+2.  Use the application features:
+    
+    *   Register as a new user.
+        
+    *   Add money to your wallet.
+        
+    *   View transaction history.
+        
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
+Contact
+-------
 
-```
-npx turbo link
-```
+If you have any questions or need support, feel free to reach out:
 
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+*   **Email**:beingshresth4@gmail.com
+    
+*   **GitHub**: Shresth-12(https://github.com/Shresth-12)
