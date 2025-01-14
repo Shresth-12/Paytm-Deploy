@@ -6,6 +6,8 @@ import { Select } from "@repo/ui/select";
 import { useState } from "react";
 import { TextInput } from "@repo/ui/textinput";
 import { OnRampTransaction } from "../app/lib/actions/OnRampTransactions";
+import { Bank } from "../app/lib/actions/Bank";
+
 
 const SUPPORTED_BANKS = [{
     name: "HDFC Bank",
@@ -15,7 +17,7 @@ const SUPPORTED_BANKS = [{
     redirectUrl: "https://www.axisbank.com/"
 }];
 
-export const AddMoney = () => {
+export const AddMoney = ({userId}:{userId:number}) => {
     const [redirectUrl, setRedirectUrl] = useState(SUPPORTED_BANKS[0]?.redirectUrl);
     const [amount,setAmount]=useState(0)
     const [provider,setProvider]=useState(SUPPORTED_BANKS[0]?.name || "")
@@ -39,9 +41,19 @@ export const AddMoney = () => {
                     amount*100,
                     provider
                 )
-                window.location.href = redirectUrl || "";
+                window.location.reload();
             }}>
             Add Money
+            </Button>
+            <Button onClick={async () => {
+                  try {
+                    await Bank(userId);
+                    window.location.reload();
+                } catch (error) {
+                    console.error("Error calling Bank function:", error);
+                }
+            }}>
+            Success
             </Button>
         </div>
     </div>
