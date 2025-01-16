@@ -37,7 +37,7 @@ Before you begin, ensure you have the following installed:
     
 *   **npm** (Node Package Manager) or **yarn**
     
-*   **MongoDB/PostgreSQL** (if applicable)
+*   **PostgreSQL**
     
 *   **Git**
     
